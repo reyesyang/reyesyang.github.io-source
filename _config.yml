@@ -1,4 +1,5 @@
 name: Reyes Yang's Blog
+timezone: Asia/Shanghai
 markdown: redcarpet
 pygments: true
 redcarpet:
