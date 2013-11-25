@@ -1,3 +1,10 @@
 name: Reyes Yang's Blog
 markdown: redcarpet
 pygments: true
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - strikethrough
+    - superscript
