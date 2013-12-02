@@ -3,9 +3,9 @@ layout: post
 title: Ruby中的dup和clone
 ---
 
-前段时间项目中有个地方需要在ActiveRecord对象被删除后继续使用对象的一些属性进行些操作，很自然想到了在删除前把对象复制一份，然后就接触到了dup和clone方法，看了文档后感觉二者还是比较容易搞混淆，结合一些搜索到的资料便做个记录。
+<del>前段时间项目中有个地方需要在 ActiveRecord 对象被删除后继续使用对象的一些属性进行些操作，很自然想到了在删除前把对象复制一份</del>(删除说明：AR 对象调用 destroy 方法删除对象时，也只是删除了数据库中的记录，实际上该对象还是存在的，不过已经变为了 frozen 的状态)，然后就接触到了 dup 和 clone 方法，看了文档后感觉二者还是比较容易搞混淆，结合一些搜索到的资料便做个记录。
 
-**dup的官方文档：**
+**dup 的官方文档：**
 
 > [dup](http://ruby-doc.org/core-2.0.0/Object.html#method-i-dup)
 >
@@ -13,7 +13,7 @@ title: Ruby中的dup和clone
 >
 > This method may have class-specific behavior. If so, that behavior will be documented under the #initialize_copy method of the class.
 
-大意是dup会进行浅拷贝--只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身。而且dup会拷贝对象的tainted状态。而特定类的dup方法可能会有额外的一些行为，具体参考该类对于initialize_copy方法的解释。
+大意是 dup 会进行浅拷贝--只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身。而且 dup 会拷贝对象的 tainted 状态。而特定类的 dup 方法可能会有额外的一些行为，具体参考该类对于 initialize_copy 方法的解释。
 
 **clone的官方文档：**
 
@@ -23,7 +23,7 @@ title: Ruby中的dup和clone
 >
 > This method may have class-specific behavior. If so, that behavior will be documented under the #initialize_copy method of the class.
 
-大意是clone会进行浅拷贝--只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身。而且clone会拷贝对象的tainted和frozen状态。而特定类的clone方法可能会有额外的一些行为，具体参考该类对于initialize_copy方法的解释。
+大意是 clone 会进行浅拷贝--只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身。而且 clone 会拷贝对象的 tainted 和 frozen 状态。而特定类的 clone 方法可能会有额外的一些行为，具体参考该类对于 initialize_copy 方法的解释。
 
 **对两者的简单总结**
 
@@ -44,7 +44,7 @@ ruby.name.object_id == ruby.dup.name.object_id  #=> true
 ruby.name.object_id == ruby.clone.name.object_id  #=> true
 {% endhighlight %}
 
-* 拷贝对象的tainted状态
+* 拷贝对象的 tainted 状态
 {% highlight ruby %}
 ruby.taint
 ruby.tainted?  #=> true
@@ -54,7 +54,7 @@ ruby.clone.tainted?  #=> true
 
 不同点：
 
-* clone会拷贝对象的frozen状态
+* clone 会拷贝对象的 frozen 状态
 {% highlight ruby %}
 ruby.freeze
 ruby.frozen?  #=> true
@@ -62,7 +62,7 @@ ruby.dup.frozen?  #=> false
 ruby.clone.frozen?  #=> true
 {% endhighlight %}
 
-* clone会拷贝对象的单例方法
+* clone 会拷贝对象的单例方法
 {% highlight ruby %}
 ruby = ProgramLanguauge.new "ruby"
 
@@ -75,13 +75,13 @@ ruby.dup.creator  #=> undefined method `creator' for #<ProgramLanguage @name="ru
 ruby.clone.creator  #=> Matz
 {% endhighlight %}
 
-Matz在对于clone和dup的描述如下：
+Matz 在对于 clone 和 dup 的描述如下：
 
-> 'clone' copies everything; internal state, singleton methods, etc. 
-> 'dup' copies object contents only (plus taintness status). 
+> 'clone' copies everything; internal state, singleton methods, etc.
+> 'dup' copies object contents only (plus taintness status).
 
 
-Rails 中 dup 的变化
+<!-- Rails 中 dup 的变化 -->
 
 参考：
 
