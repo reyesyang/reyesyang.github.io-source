@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby中的循环语句
+title: Ruby 中的循环语句
 ---
 
 由于 Ruby 提供了很多便捷的方法进行对象的循环遍历，如：Array#each, Integer#times, Integer#downto, Integer#upto 等，所以日常的开发中很少会需要写循环语句。便整理了相关内容，方便日后查看参考。Ruby 中的循环语句有 for..in, while, until 和 loop  四种，具体使用方法如下：
@@ -61,7 +61,7 @@ end until i > 3
 
 ```ruby
 loop do
-  puts 0 
+  puts 0
 end
 ```
 

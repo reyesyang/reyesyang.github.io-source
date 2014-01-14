@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby中的Shallow copy和Deep copy
+title: Ruby 中的 Shallow copy 和 Deep copy
 ---
 
 ###什么是Shallow copy和Deep copy?
