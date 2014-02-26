@@ -18,7 +18,7 @@ git fetch
 git merge FETCH_HEAD
 ```
 
-另一个接触比较多的命令是 `git pull --rebase`， 则会在合并操作之前先进行一次衍合(rebase)操作。
+`git pull --rebase` 命令也经常会使用到，该命令会在合并操作之前先进行一次衍合(rebase)操作。
 假设当前在 master 分支，并且 master 的跟踪分支为 origin/master，则 `git pull --rebase` 等价于下面的三步操作：
 
 ```bash
