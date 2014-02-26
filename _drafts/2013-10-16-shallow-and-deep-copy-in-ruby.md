@@ -3,7 +3,7 @@ layout: post
 title: Ruby 中的 Shallow copy 和 Deep copy
 ---
 
-###什么是Shallow copy和Deep copy?
+###什么是 Shallow copy 和 Deep copy?
 
 * Shallow copy
 
@@ -16,15 +16,15 @@ title: Ruby 中的 Shallow copy 和 Deep copy
   > An alternative is a deep copy. Here the data is actually copied over. The result is different from the result a shallow copy gives. The advantage is that A and B do not depend on each other but at the cost of a slower and more expensive copy.
 
 
-两者最主要区别就是如何处理引用对象，Shallow copy只复制了对象地址，而Deep copy则复制了被引用对象本身。
+两者最主要区别就是如何处理引用对象，Shallow copy 只复制了对象地址，而 Deep copy 则复制了被引用对象本身。
 
-###Ruby中的Shallow copy
+###Ruby 中的 Shallow copy
 
-Ruby提供的两个复制对象的方法`Object#dup`和`Object#clone`都是Shallow copy。
+Ruby 提供的两个复制对象的方法 `Object#dup` 和 `Object#clone` 都是 Shallow copy。
 
-###Ruby中的Deep copy
+###Ruby 中的 Deep copy
 
-Ruby默认没有提供Deep copy，通常有三种方法解决这个问题：
+Ruby 默认没有提供 Deep copy，通常有三种方法解决这个问题：
 
 方法一，使用序列化和反序列化：
 
@@ -36,7 +36,7 @@ class Object
 end
 {% endhighlight %}
 
-不足之处是Marshel不能dump下面这些对象：
+不足之处是 Marshel 不能 dump 下面这些对象：
 
 1. anonymous Class/Module.
 2. objects which related to its system (ex: Dir, File::Stat, IO, File, Socket and so on)
