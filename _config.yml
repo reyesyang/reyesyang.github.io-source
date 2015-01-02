@@ -1,7 +1,7 @@
 name: Reyes Yang's Blog
 timezone: Asia/Shanghai
 markdown: redcarpet
-pygments: true
+hihglighter: 'pygments'
 redcarpet:
   extensions:
     - no_intra_emphasis

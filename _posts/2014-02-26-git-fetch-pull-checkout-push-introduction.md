@@ -79,7 +79,8 @@ git push remote branch_name:other_branch_name
 
 来将当前本地分支代码推送到其他远程分支上去。
 
-###参考
+####参考
+
 1. [git-fetch(1) Manual Page](http://git-scm.com/docs/git-fetch)
 2. [git-pull(1) Manual Page](http://git-scm.com/docs/git-pull)
 2. [git-checkout(1) Manual Page](http://git-scm.com/docs/git-checkout)
