@@ -1,3 +1,5 @@
 jQuery(document).ready(function($){
-    // todo: jquery stuff should need to put here.
+  $(".gravatar").on("click", function(e) {
+    window.location = "/";
+  });
 });

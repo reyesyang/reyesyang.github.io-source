@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
 
     <!-- Modernizr js -->
-    <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>    
+    <script async src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.min.js"></script>
 
     <!-- IE Fixes -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,9 +25,9 @@
   <body class="{{ site.harmony.basetheme }}">
     <header class="main-header">
       <div class="wc-container">
-        <img class="gravatar" src="//s.gravatar.com/avatar/33faa1c3d66f588964f4ab75a69e5304">
-        <h1><a href="{{ site.baseurl }}/">{{ site.harmony.name }}</a></h1>
-        <h2>{{ site.harmony.description }}</h2>
+        <img class="gravatar" src="{{ site.baseurl }}/assets/css/images/gravatar.jpg">
+        <!--h1><a href="{{ site.baseurl }}/">{{ site.harmony.name }}</a></h1-->
+        <!--h2>{{ site.harmony.description }}</h2-->
         {% include header-links.html %}                
       </div>
     </header>
@@ -47,20 +47,18 @@
     </footer>
     <script type="text/javascript">
       /* To avoid render blocking css */
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
+      //var cb = function() {
+      //  var l = document.createElement('link'); l.rel = 'stylesheet';
+      //  l.href = 'http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
+      //  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      //};
+      //var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      //  webkitRequestAnimationFrame || msRequestAnimationFrame;
+      //if (raf) raf(cb);
+      //else window.addEventListener('load', cb);
     </script>
     <!-- jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- When no internet load JQuery from local -->
-    <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/jquery.min.js"><\/script>')</script>
+    <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <!-- Site js -->
     <script src="{{ site.baseurl }}/assets/js/all.js"></script>
     <!-- Google analytics  -->

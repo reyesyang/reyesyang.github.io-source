@@ -11,7 +11,7 @@ url: http://reyesyang.github.io
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: Reyes Yang
+  name: 杨海龙的个人网站
   # Little description about your site
   description:
   # 'meta_description:' Write an awesome description for your new site here.
@@ -21,7 +21,7 @@ harmony:
     A personal site about Reyes Yang, who is a programmer, a football fans.
   basetheme: darken # pre defined thmes are darken, blue-water, redish.
   author: # Author details
-    name: Reyes Yang
+    name: 杨海龙(Reyes Yang)
     email: reyes.yang@gmail.com
     url: http://reyesyang.info
 
