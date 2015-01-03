@@ -1,11 +1,65 @@
-name: Reyes Yang's Blog
+# Harmony Jekyll theme general configurations 
+
+# Base URL
+baseurl:
+
+# Site live URL
+url: http://reyesyang.info
+
+# Localhost 
+# url: http://127.0.0.1:4000  
+
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: Reyes Yang
+  # Little description about your site
+  description:
+  # 'meta_description:' Write an awesome description for your new site here.
+  # It will appear in your document head meta (for Google search results) and 
+  # in your feed.xml site description.
+  meta_description: > # 
+    A personal site about Reyes Yang, who is a programmer, a football fans.
+  basetheme: darken # pre defined thmes are darken, blue-water, redish.
+  author: # Author details
+    name: Reyes Yang
+    email: reyes.yang@gmail.com
+    url: http://reyesyang.info
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-24516888-1
+
+  # Profile links, leave blank to ignore
+  social: 
+    github: reyesyang
+    twitter: reyesyang
+    facebook:
+    gplus:
+    dribble:
+    pinterest: 
+  # Toggle disclaimer in footer
+  show_disclaimer: true
+
+# Conversion / Build settings 
 timezone: Asia/Shanghai
-markdown: redcarpet
-hihglighter: 'pygments'
-redcarpet:
-  extensions:
-    - no_intra_emphasis
-    - fenced_code_blocks
-    - autolink
-    - strikethrough
-    - superscript
+markdown: kramdown
+kramdown:
+  input: GFM
+# This is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: pygments 
+
+# Permalinks
+permalink: pretty
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed
