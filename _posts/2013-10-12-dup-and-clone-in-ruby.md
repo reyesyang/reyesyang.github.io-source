@@ -29,51 +29,47 @@ title: Ruby 中的 dup 和 clone
 
 相同点：
 
-* 浅拷贝(shallow copy)：只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身
-{% highlight ruby %}
-class ProgramLanguage
-  attr_accessor :name
+1.  浅拷贝(shallow copy)：只拷贝对象包含的实例变量，而不是实例变量所引用的对象本身
 
-  def initialize(name)
-    @name = name
-  end
-end
+        class ProgramLanguage
+          attr_accessor :name
 
-ruby = ProgramLanguage.new "ruby"
-ruby.name.object_id == ruby.dup.name.object_id  #=> true
-ruby.name.object_id == ruby.clone.name.object_id  #=> true
-{% endhighlight %}
+          def initialize(name)
+            @name = name
+          end
+        end
 
-* 拷贝对象的 tainted 状态
-{% highlight ruby %}
-ruby.taint
-ruby.tainted?  #=> true
-ruby.dup.tainted?  #=> true
-ruby.clone.tainted?  #=> true
-{% endhighlight %}
+        ruby = ProgramLanguage.new "ruby"
+        ruby.name.object_id == ruby.dup.name.object_id  #=> true
+        ruby.name.object_id == ruby.clone.name.object_id  #=> true
+
+2.  拷贝对象的 tainted 状态
+
+        ruby.taint
+        ruby.tainted?  #=> true
+        ruby.dup.tainted?  #=> true
+        ruby.clone.tainted?  #=> true
 
 不同点：
 
-* clone 会拷贝对象的 frozen 状态
-{% highlight ruby %}
-ruby.freeze
-ruby.frozen?  #=> true
-ruby.dup.frozen?  #=> false
-ruby.clone.frozen?  #=> true
-{% endhighlight %}
+1.  clone 会拷贝对象的 frozen 状态
 
-* clone 会拷贝对象的单例方法
-{% highlight ruby %}
-ruby = ProgramLanguauge.new "ruby"
+        ruby.freeze
+        ruby.frozen?  #=> true
+        ruby.dup.frozen?  #=> false
+        ruby.clone.frozen?  #=> true
 
-def ruby.creator
-  "Matz"
-end
+2.  clone 会拷贝对象的单例方法
 
-ruby.creator  #=> Matz
-ruby.dup.creator  #=> undefined method `creator' for #<ProgramLanguage @name="ruby">
-ruby.clone.creator  #=> Matz
-{% endhighlight %}
+        ruby = ProgramLanguauge.new "ruby"
+
+        def ruby.creator
+          "Matz"
+        end
+
+        ruby.creator  #=> Matz
+        ruby.dup.creator  #=> undefined method `creator' for #<ProgramLanguage @name="ruby">
+        ruby.clone.creator  #=> Matz
 
 Matz 在对于 clone 和 dup 的描述如下：
 

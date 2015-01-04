@@ -122,6 +122,12 @@ p {
   }
 }
 
+li {
+  p {
+    @include font-size(16px);
+  }
+}
+
 a {
   background: transparent;
 }
