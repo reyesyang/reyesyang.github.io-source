@@ -1,41 +1,18 @@
 ---
 layout: default
+title: 首页
 ---
-<div id="home" class="page-content wc-container">
-	<div class="posts">
-  		{% for post in site.posts limit:10 %}
-  			<div class="post">
-    			<h3 class="post-title">
-			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
-			        {{ post.title }}
-			      </a>
-    			</h3>
+<!-- Posts -->
+<ul id="posts">
 
-          <p class="post-meta">
-            {% if (post.categories.size > 0 %}
-            <span class="categories">
-            {{ post.categories | array_to_sentence_string }}
-            </span> |
-            {% endif %}
-            <span class="post-date">
-            {{ post.date | date: "%b %-d, %Y" }} 
-            </span>
-          </p>          
-    			    			
-  				<p>
-	  				{{ post.excerpt }}	
-  				</p>
-  				<p>
-  					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
-  						阅读全文
-					</a>
-  				</p>
-  			</div>
-  		{% endfor %}
-	</div>
-	<div class="post-footer">
-    <div class="column-full">
-      <a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}">更多文章</a>
-    </div>
-	</div>
-</div>
+	{% for post in paginator.posts %}
+
+	  <li class="post">
+	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+	  </li>
+
+    {% endfor %}
+
+</ul>
