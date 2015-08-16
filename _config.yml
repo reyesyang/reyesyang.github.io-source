@@ -1,65 +1,33 @@
-# Harmony Jekyll theme general configurations 
+# Site settings
+title: Reyes Yang 的个人博客
+description: "Reyes Yang 的个人博客，记录了关于生活，编程的一些事情。"
+url: "http://reyesyang.github.io/"
+author:
+  name: "Reyes Yang"
+  email: "reyes.yang@gmail.com"
+  url: "http://reyesyang.info"
 
-# Base URL
-baseurl:
-
-# Site live URL
-url: http://reyesyang.github.io
-
-# Localhost 
-# url: http://127.0.0.1:4000  
-
-# Harmony theme configuration. Please change accordingly.
-harmony:
-  name: 杨海龙的个人网站
-  # Little description about your site
-  description:
-  # 'meta_description:' Write an awesome description for your new site here.
-  # It will appear in your document head meta (for Google search results) and 
-  # in your feed.xml site description.
-  meta_description: > # 
-    A personal site about Reyes Yang, who is a programmer, a football fans.
-  basetheme: darken # pre defined thmes are darken, blue-water, redish.
-  author: # Author details
-    name: 杨海龙(Reyes Yang)
-    email: reyes.yang@gmail.com
-    url: http://reyesyang.info
-
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key: UA-24516888-1
-
-  # Profile links, leave blank to ignore
-  social: 
-    github: reyesyang
-    twitter: reyesyang
-    facebook:
-    gplus:
-    dribble:
-    pinterest: 
-  # Toggle disclaimer in footer
-  show_disclaimer: true
-
-# Conversion / Build settings 
-timezone: Asia/Shanghai
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
-kramdown:
-  input: GFM
-# This is how you put pygments config in jekyll 2.0 instead of pygments: true
-highlighter: pygments 
+source: .
+destination: ./_site
+paginate: 8
+paginate_path: /page/:num
 
-# Permalinks
-permalink: pretty
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
-exclude: 
-  - CNAME
-  - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
+# Custom variables
+version: "1.1.0"
 
-# Sass conversion configs
-sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
