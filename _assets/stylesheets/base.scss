@@ -1,0 +1,34 @@
+$main-color: #34495E;
+$background-color: #FDFDFD;
+$text-color: #222222;
+$monospace-font: Monaco, 'Ubuntu Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+article {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.7;
+  }
+}
+
+.highlight {
+  margin: 0 0 10px 0;
+  padding: 10px 15px;
+
+  pre {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: $monospace-font;
+
+    code {
+      font-family: $monospace-font;
+    }
+
+    .lineno {
+      margin: 0 10px 0 0;
+    }
+  }
+}

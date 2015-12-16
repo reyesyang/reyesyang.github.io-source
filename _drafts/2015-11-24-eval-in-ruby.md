@@ -30,14 +30,16 @@ layout: post
 
 Difference between pass string and proc as argument:
 
-    CONST = '::CONST'
+{% highlight ruby %}
+CONST = '::CONST'
 
-    class A
-      CONST = 'A::CONST'
-    end
+class A
+  CONST = 'A::CONST'
+end
 
-    A.class_eval { puts CONST } # => ::CONST
-    A.class_eval "puts CONST" # => A::CONST
+A.class_eval { puts CONST } # => ::CONST
+A.class_eval "puts CONST" # => A::CONST
+{% endhighlight %}
 
 Module#class_eval is alias for Module#module_eval 
 

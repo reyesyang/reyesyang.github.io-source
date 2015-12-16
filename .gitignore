@@ -2,3 +2,5 @@ _site
 .sass-cache
 .ruby-version
 .rbenv-gemsets
+.bundle
+.asset-cache

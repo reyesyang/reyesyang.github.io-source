@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 文章
+permalink: /archives/
 ---
 <div class="page-content wc-container">
   <h1>文章</h1>  
