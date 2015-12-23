@@ -1,4 +1,4 @@
 //= require jquery
 //= require bootstrap-sprockets
-//= require hanzi
+//= require han
 //= require menu

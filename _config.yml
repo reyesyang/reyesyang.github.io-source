@@ -14,6 +14,9 @@ destination: ./_site
 paginate: 10
 paginate_path: /page/:num
 
+kramdown:
+  input: GFM
+
 # Default values
 defaults:
   -
