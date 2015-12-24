@@ -1,5 +1,5 @@
 ---
-title: 理解 Ruby 中的作用域（Scope）
+title: "[翻译] 理解 Ruby 中的作用域"
 tags: ruby
 ---
 
