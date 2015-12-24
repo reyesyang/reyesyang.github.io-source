@@ -1,5 +1,5 @@
 ---
-title: "[翻译] Ruby 元编程：都是 self 的事"
+title: "[翻译] Ruby 元编程：都是 Self 的事"
 tags: Ruby
 ---
 
