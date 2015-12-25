@@ -1,12 +1,8 @@
-@import "bootstrap-sprockets";
-
 $font-size-base: 16px;
-
+@import "bootstrap-sprockets";
 @import "bootstrap";
-//@import "han";
 
 @import "syntax";
-
 @import "base";
 @import "mixin";
 @import "layout";

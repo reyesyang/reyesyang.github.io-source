@@ -1,7 +1,6 @@
 $main-color: #34495E;
 $background-color: #FDFDFD;
 $text-color: #222222;
-$monospace-font: Monaco, 'Ubuntu Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
 body {
   font-family: inherit;
@@ -15,8 +14,6 @@ article {
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-  //   line-height: 1.7;
-  //   margin: 1em 0;
   }
 
   p, li {
@@ -40,10 +37,6 @@ article {
     border-width: 0 0 0 0.25em;
   }
 
-  code.highlighter-rouge {
-    font-family: $monospace-font;
-  }
-
   pre.highlight {
     margin: 0 0 10px 0;
     padding: 10px 15px;
@@ -51,8 +44,8 @@ article {
     border-radius: 0;
 
     code {
-      font-family: $monospace-font;
       white-space: inherit;
+      word-wrap: normal;
     }
   }
 }
