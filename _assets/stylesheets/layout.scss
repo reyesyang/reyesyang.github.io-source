@@ -2,7 +2,7 @@
 
 /* Navigation */
 
-#nav, #nav-left { 
+#nav, #nav-left {
   a {
     display: block;
     color: $background-color;
@@ -152,8 +152,33 @@
 /* Posts */
 
 #posts {
+  padding: 0;
+  border-top: 1px solid rgba(213 , 213, 213, 0.5);
+
   li {
     list-style-type: none;
+    padding: 3em 0;
+    border-bottom: 1px solid rgba(213 , 213, 213, 0.5);
+
+    .title {
+      margin: 0;
+      font-size: 1.5em;
+      // font-weight: bold;
+
+      a {
+        color: rgba(46,48,58,0.96);
+
+        &:hover {
+          color: #D11D1A;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .excerpt {
+      color: gray;
+      margin: 1em 0;
+    }
   }
 }
 
