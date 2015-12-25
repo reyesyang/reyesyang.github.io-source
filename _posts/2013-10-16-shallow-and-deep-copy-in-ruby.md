@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Ruby 中的 Shallow copy 和 Deep copy
+tags: [Ruby]
 ---
 
 #### 什么是 Shallow copy？
@@ -148,4 +148,3 @@ end
 *   [What is the difference between a deep copy and a shallow copy?](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)
 *   [Deep Cloning](http://www.artima.com/forums/flat.jsp?forum=123&thread=40913)
 *   [深いコピーの作成(2) - pegacornの日記](http://d.hatena.ne.jp/pegacorn/20070417/1176817721)
-

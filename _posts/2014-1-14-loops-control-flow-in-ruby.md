@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Ruby 中的循环控制语句
+tags: [Ruby, Syntax]
 ---
 
 Ruby 中常用到的循环控制语句包括：next、break、redo、retry 四种，下面就详细看看使用情景：

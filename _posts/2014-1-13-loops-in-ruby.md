@@ -1,5 +1,6 @@
 ---
 title: Ruby 中的循环语句
+tags: [Ruby, Syntax]
 ---
 
 由于 Ruby 提供了很多便捷的方法进行对象的循环遍历，如：Array#each、Integer#times、Integer#downto、Integer#upto、Kernel#loop 等，所以日常的开发中很少会需要写循环语句。便整理了相关内容，方便日后查看参考。

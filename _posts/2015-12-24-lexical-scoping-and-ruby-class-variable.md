@@ -1,6 +1,6 @@
 ---
 title: "[翻译] 词法作用域和 Ruby 中的类变量"
-tags: ruby
+tags: [Ruby, Scope, Lexical Scope]
 ---
 
 本文翻译自 Starr Horne 发表在 Honeybadger 上的文章：[Lexical scoping and Ruby class variables](http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/)

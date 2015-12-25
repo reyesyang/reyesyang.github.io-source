@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 首页
+title: 三言两语一知半解
 ---
 <ul id="posts">
   {% for post in paginator.posts %}
@@ -19,10 +19,9 @@ title: 首页
         </span>
 
         {% for tag in post.tags %}
-          <span class="tag">
-            #{{ tag }}
-          </span>
+          <span class="tag"> #{{ tag }} </span>
         {% endfor %}
+      </div>
     </li>
   {% endfor %}
 </ul>

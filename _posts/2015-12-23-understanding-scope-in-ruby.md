@@ -1,6 +1,6 @@
 ---
 title: "[翻译] 理解 Ruby 中的作用域"
-tags: ruby
+tags: [Ruby, Scope]
 ---
 
 本文翻译自 Darko Gjorgjievski 发表在 sitepoint 上的文章 [Understanding Scope in Ruby](http://www.sitepoint.com/understanding-scope-in-ruby/)

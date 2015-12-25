@@ -1,6 +1,6 @@
 ---
 title: "[翻译] Ruby 元编程：都是 Self 的事"
-tags: Ruby
+tags: [Ruby, Meta Programming]
 ---
 
 本文翻译自 Yehuda Katz 的博客文章 [Metaprogramming in Ruby: It's All About the Self](http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/)

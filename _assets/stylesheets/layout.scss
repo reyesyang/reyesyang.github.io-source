@@ -120,11 +120,15 @@
   text-align: center;
   padding: 24px 0;
   position: relative;
+  border-bottom: 1px solid rgba(213 , 213, 213, 0.5);
+  margin: 0 0 3em 0;
+
   a {
     text-decoration: none;
     color: $text-color;
     display: inline-block;
   }
+
   img {
     height: 72px;
     width: 72px;
@@ -135,17 +139,21 @@
     border-style: solid;
     border-width: 1px;
   }
+
   h1 {
-    font-family: 'Signika', sans-serif; //Emerald logo font
-    font-weight: 600;
+    font-size: 2em;
   }
-  &:after {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
+
+  .author {
+    color: #D11D1A;
+  }
+
+  .datetime {
+    color: gray;
+  }
+
+  .tags {
+    color: #D11D1A;
   }
 }
 
@@ -153,17 +161,16 @@
 
 #posts {
   padding: 0;
-  border-top: 1px solid rgba(213 , 213, 213, 0.5);
 
-  li {
+  .post {
     list-style-type: none;
-    padding: 3em 0;
+    padding: 0 0 3em 0;
+    margin: 0 0 3em 0;
     border-bottom: 1px solid rgba(213 , 213, 213, 0.5);
 
     .title {
       margin: 0;
       font-size: 1.5em;
-      // font-weight: bold;
 
       a {
         color: rgba(46,48,58,0.96);
@@ -178,6 +185,16 @@
     .excerpt {
       color: gray;
       margin: 1em 0;
+    }
+
+    .datetime {
+      color: gray;
+      margin: 0 10px 0 0;
+    }
+
+
+    .tag {
+      color: #D11D1A;
     }
   }
 }

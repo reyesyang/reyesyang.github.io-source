@@ -1,6 +1,6 @@
 ---
 title: Git fetch, pull, checkout 和 push 简介
-layout: post
+tags: [Git]
 ---
 
 #### git fetch

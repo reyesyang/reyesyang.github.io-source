@@ -1,6 +1,6 @@
 ---
 title: "[翻译] 理解 Ruby 中的改良和词法作用域"
-tags: Ruby Refinement
+tags: [Ruby, Lexical Scope, Refinement]
 ---
 
 本文翻译自 Starr Horne 发表在 Honeybadger 上的文章：[Understanding Ruby Refinements and Lexical Scope](http://blog.honeybadger.io/understanding-ruby-refinements-and-lexical-scope/)
