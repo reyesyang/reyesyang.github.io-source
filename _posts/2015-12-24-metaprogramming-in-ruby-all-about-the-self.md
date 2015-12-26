@@ -198,12 +198,12 @@ end
 
 在下面的表格中，创建一个新作用域指的是代码块中的语句不能访问代码块之外的局部变量。
 
-| mechanism | method resolution | method definition | new scope? |
+| 定义机制 | 方法调用 | 方法定义 | 新作用域 |
 |-----------|-------------------|-------------------|------------|
-| class Person | Person | same | yes |
-| class << Person | Person's metaclass | same | yes |
-| Person.class_eval | Person | same | no |
-| Person.instance_eval | Person | Person's metaclass | no |
+| class Person | Person | 相同 | 是 |
+| class << Person | Person's metaclass | 相同 | 是 |
+| Person.class_eval | Person | 相同 | 非 |
+| Person.instance_eval | Person | Person's metaclass | 非 |
 
 需要注意的是 `class_eval` 仅仅在 Module（Class 继承自 Module）中有效，而且它是 `module_eval` 的别名。另外，Ruby 从 1.8.7 版本开始添加了 `instance_exec` 方法，和 `instance_eval` 类似，但是它允许你传入块参数。
 

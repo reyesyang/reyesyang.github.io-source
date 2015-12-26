@@ -8,7 +8,6 @@ body {
 
 article {
   .title {
-    // text-align: center;
     font-size: 2em;
   }
 
@@ -22,6 +21,7 @@ article {
 
   table {
     th, td {
+      word-break: break-word;
       border-width: 1px;
       border-style: solid;
       padding: 5px 10px;
