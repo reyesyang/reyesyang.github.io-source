@@ -1,8 +1,9 @@
 ---
-tags: jekyll, ruby, markdown
+title: "Jekyll 中 markdown list 中使用代码块"
+tags: [jekyll, ruby, markdown]
 ---
 
-是否使用 Kramdown 的 `{% highlight ruby linenos %}` 语法就没办法避免这个问题？
+是否使用 Kramdown 的 `{\% highlight ruby linenos \%}` 语法就没办法避免这个问题？
 
 是否使用 Redcarpet 替换 Kramdown 的话就能完美替代？
 
