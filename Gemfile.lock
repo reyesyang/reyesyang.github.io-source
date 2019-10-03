@@ -1,5 +1,5 @@
 GEM
-  remote: https://ruby.taobao.org/
+  remote: https://gems.ruby-china.com/
   specs:
     addressable (2.4.0)
     autoprefixer-rails (6.1.2)
@@ -65,4 +65,4 @@ DEPENDENCIES
   jekyll-paginate
 
 BUNDLED WITH
-   1.10.6
+   1.12.5
